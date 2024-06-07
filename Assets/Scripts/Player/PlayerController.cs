@@ -38,11 +38,16 @@ public class PlayerController : MonoBehaviour
     {
         inputDirection = inputControl.Gameplay.Move.ReadValue<Vector2>();
     }
-
     private void FixedUpdate()
     {
         Move();
     }
+
+    //測試
+    // private void OnTriggerStay2D(Collider2D other)
+    // {
+    //     Debug.Log(other.name);
+    // }
 
     public void Move()
     {
