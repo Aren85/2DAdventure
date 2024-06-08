@@ -10,11 +10,16 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
     private PlayerAnimation playerAnimation;
+    private CapsuleCollider2D coll;
     public Vector2 inputDirection;
     [Header("基本參數")]
     public float speed;
     public float jumpForce;
     public float hurtForce;
+
+    [Header("物理材質")]
+    public PhysicsMaterial2D normal;
+    public PhysicsMaterial2D wall;
 
 
     [Header("狀態")]
@@ -27,6 +32,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
         playerAnimation = GetComponent<PlayerAnimation>();
+        coll = GetComponent<CapsuleCollider2D>();
         inputControl = new PlayerInputControl();
 
         //跳躍
@@ -50,10 +56,11 @@ public class PlayerController : MonoBehaviour
     public void Update()
     {
         inputDirection = inputControl.Gameplay.Move.ReadValue<Vector2>();
+        CheckState();
     }
     private void FixedUpdate()
     {
-        if (!isHurt)
+        if (!isHurt && !isAttack)
         {
             Move();
         }
@@ -115,4 +122,9 @@ public class PlayerController : MonoBehaviour
         inputControl.Gameplay.Disable();
     }
     #endregion
+
+    private void CheckState()
+    {
+        coll.sharedMaterial = physicsCheck.isGround ? normal : wall;
+    }
 }
