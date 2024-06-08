@@ -119,6 +119,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -585,7 +598,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_22
+      name: BlueAttack_3_1
       rect:
         serializedVersion: 2
         x: 0
@@ -606,7 +619,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_23
+      name: BlueAttack_3_2
       rect:
         serializedVersion: 2
         x: 56
@@ -627,7 +640,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_24
+      name: BlueAttack_3_3
       rect:
         serializedVersion: 2
         x: 112
@@ -648,7 +661,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_25
+      name: BlueAttack_3_4
       rect:
         serializedVersion: 2
         x: 168
@@ -669,7 +682,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_26
+      name: BlueAttack_3_5
       rect:
         serializedVersion: 2
         x: 224
@@ -690,7 +703,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_27
+      name: BlueAttack_3_6
       rect:
         serializedVersion: 2
         x: 280
@@ -711,7 +724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_28
+      name: BlueAttack_3_7
       rect:
         serializedVersion: 2
         x: 336
@@ -732,7 +745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_2_29
+      name: BlueAttack_3_8
       rect:
         serializedVersion: 2
         x: 392
@@ -973,6 +986,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BlueAttack_3_1: -1430463087
+      BlueAttack_3_2: 568714138
+      BlueAttack_3_3: -1347179251
+      BlueAttack_3_4: 1369525988
+      BlueAttack_3_5: 2040666240
+      BlueAttack_3_6: -920560621
+      BlueAttack_3_7: 1657216937
+      BlueAttack_3_8: -1602994493
       BlueWalk_1: 679790599
       BlueWalk_10: 2091185879
       BlueWalk_2: -1877336504
@@ -995,14 +1016,6 @@ TextureImporter:
       char_blue_2_19: 1483305856
       char_blue_2_20: 1170227610
       char_blue_2_21: 164813768
-      char_blue_2_22: -1430463087
-      char_blue_2_23: 568714138
-      char_blue_2_24: -1347179251
-      char_blue_2_25: 1369525988
-      char_blue_2_26: 2040666240
-      char_blue_2_27: -920560621
-      char_blue_2_28: 1657216937
-      char_blue_2_29: -1602994493
       char_blue_2_30: -362744368
       char_blue_2_31: 207957152
       char_blue_2_32: 1353385401

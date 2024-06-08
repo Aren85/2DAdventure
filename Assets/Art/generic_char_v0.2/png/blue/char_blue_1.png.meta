@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_6
+      name: BlueAttack_1_1
       rect:
         serializedVersion: 2
         x: 0
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_7
+      name: BlueAttack_1_2
       rect:
         serializedVersion: 2
         x: 56
@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_8
+      name: BlueAttack_1_3
       rect:
         serializedVersion: 2
         x: 112
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_9
+      name: BlueAttack_1_4
       rect:
         serializedVersion: 2
         x: 168
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_10
+      name: BlueAttack_1_5
       rect:
         serializedVersion: 2
         x: 224
@@ -367,7 +367,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_11
+      name: BlueAttack_1_6
       rect:
         serializedVersion: 2
         x: 280
@@ -388,7 +388,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_12
+      name: BlueAttack_2_1
       rect:
         serializedVersion: 2
         x: 336
@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_blue_1_13
+      name: BlueAttack_2_2
       rect:
         serializedVersion: 2
         x: 392
@@ -1574,6 +1574,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BlueAttack_1_1: -2097737434
+      BlueAttack_1_2: -113149331
+      BlueAttack_1_3: -1576512635
+      BlueAttack_1_4: 515058100
+      BlueAttack_1_5: 1449782228
+      BlueAttack_1_6: -1350695870
+      BlueAttack_2_1: -1342309412
+      BlueAttack_2_2: 1954228354
       BlueDead_1: 1606504095
       BlueDead_10: 481671323
       BlueDead_11: 1047646076
@@ -1620,17 +1628,12 @@ TextureImporter:
       BlueRun_6: 1952216176
       BlueRun_7: 46161763
       BlueRun_8: 543582249
-      char_blue_1_10: 1449782228
-      char_blue_1_11: -1350695870
-      char_blue_1_12: -1342309412
-      char_blue_1_13: 1954228354
       char_blue_1_54: -1232389376
       char_blue_1_55: -812591449
       char_blue_1_56: 1218206893
       char_blue_1_57: -494553765
       char_blue_1_58: -1252627177
       char_blue_1_59: 267111379
-      char_blue_1_6: -2097737434
       char_blue_1_60: -2000486747
       char_blue_1_61: -1077019383
       char_blue_1_62: -956410000
@@ -1639,9 +1642,6 @@ TextureImporter:
       char_blue_1_65: 1424522843
       char_blue_1_66: -516248555
       char_blue_1_67: 1974989160
-      char_blue_1_7: -113149331
-      char_blue_1_8: -1576512635
-      char_blue_1_9: 515058100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

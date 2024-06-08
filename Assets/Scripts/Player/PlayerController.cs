@@ -9,23 +9,31 @@ public class PlayerController : MonoBehaviour
     public PlayerInputControl inputControl;
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
+    private PlayerAnimation playerAnimation;
     public Vector2 inputDirection;
     [Header("基本參數")]
     public float speed;
     public float jumpForce;
-
     public float hurtForce;
-    public bool isHurt;
 
+
+    [Header("狀態")]
+    public bool isAttack;
+    public bool isHurt;
     public bool isDead;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
+        playerAnimation = GetComponent<PlayerAnimation>();
         inputControl = new PlayerInputControl();
 
+        //跳躍
         inputControl.Gameplay.Jump.started += Jump;
+
+        //攻擊
+        inputControl.Gameplay.Attack.started += PlayerAttack;
     }
 
 
@@ -84,6 +92,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void PlayerAttack(InputAction.CallbackContext context)
+    {
+        playerAnimation.PlayAttack();
+        isAttack = true;
+
+    }
+
+    #region UnityEvent
     public void GetHurt(Transform attacker)
     {
         isHurt = true;
@@ -98,4 +114,5 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         inputControl.Gameplay.Disable();
     }
+    #endregion
 }
