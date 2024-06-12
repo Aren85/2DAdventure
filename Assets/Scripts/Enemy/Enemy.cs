@@ -15,11 +15,18 @@ public class Enemy : MonoBehaviour
     public float hurtForce;
 
     public Transform attacker;
+    [Header("檢測")]
+    public Vector2 centerOffset;
+    public Vector2 checkSize;
+    public float checkDistance;
+    public LayerMask attackLayer;
 
     [Header("計時器")]
     public float waitTime;
     public float waitTimeCounter;
     public bool wait;
+    public float lostTime;
+    public float lostTimeCounter;
 
     [Header("狀態")]
     public bool isHurt;
@@ -83,7 +90,36 @@ public class Enemy : MonoBehaviour
                 transform.localScale = new Vector3(faceDir.x, 1, 1);
             }
         }
+
+        if (!FoundPlayer() && lostTimeCounter > 0)
+        {
+            lostTimeCounter -= Time.deltaTime;
+        }
+        // else
+        // {
+        //     lostTimeCounter = lostTime;
+        // }
     }
+
+    public bool FoundPlayer()
+    {
+        return Physics2D.BoxCast(transform.position + (Vector3)centerOffset, checkSize, 0, faceDir, checkDistance, attackLayer);
+    }
+
+    public void SwitchState(NPCState state)
+    {
+        var newState = state switch
+        {
+            NPCState.Patrol => patrolState,
+            NPCState.Chase => chaseState,
+            _ => null
+        };
+
+        currentState.OnExit();
+        currentState = newState;
+        currentState.OnEnter(this);
+    }
+    #region 事件執行方法
 
     public void OnTakeDamage(Transform attackTrans)
     {
@@ -101,7 +137,7 @@ public class Enemy : MonoBehaviour
         isHurt = true;
         anim.SetTrigger("hurt");
         Vector2 dir = new Vector2(transform.position.x - attackTrans.position.x, 0).normalized;
-
+        rb.velocity = new Vector2(0, rb.velocity.y);
         StartCoroutine(OnHurt(dir));
     }
 
@@ -122,5 +158,11 @@ public class Enemy : MonoBehaviour
     public void DestroyAfterAnimation()
     {
         Destroy(this.gameObject);
+    }
+    #endregion
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position + (Vector3)centerOffset + new Vector3(checkDistance * -transform.localScale.x, 0), 0.2f);
     }
 }
