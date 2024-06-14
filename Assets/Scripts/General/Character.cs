@@ -15,12 +15,14 @@ public class Character : MonoBehaviour
     private float invulnerableCounter;//無敵計時器
     public bool invulnerable;//無敵狀態
 
+    public UnityEvent<Character> OnHealthChange;
     public UnityEvent<Transform> OnTakeDamage;
     public UnityEvent OnDie;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        OnHealthChange?.Invoke(this);
     }
 
     private void Update()
@@ -54,6 +56,8 @@ public class Character : MonoBehaviour
             //觸發死亡
             OnDie?.Invoke();
         }
+
+        OnHealthChange?.Invoke(this);
     }
     /// <summary>
     /// 觸發受傷無敵

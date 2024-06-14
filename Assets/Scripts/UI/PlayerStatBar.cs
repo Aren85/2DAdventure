@@ -5,9 +5,18 @@ using UnityEngine.UI;
 
 public class PlayerStatBar : MonoBehaviour
 {
+
     public Image healthImage;
     public Image healthDelayImage;
     public Image powerImage;
+
+    private void Update()
+    {
+        if (healthDelayImage.fillAmount > healthImage.fillAmount)
+        {
+            healthDelayImage.fillAmount -= Time.deltaTime;
+        }
+    }
 
     /// <summary>
     /// 接受Health的變更百分比
