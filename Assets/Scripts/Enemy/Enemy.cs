@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         physicsCheck = GetComponent<PhysicsCheck>();
 
         currentSpeed = normalSpeed;
-        waitTimeCounter = waitTime;
+        //waitTimeCounter = waitTime;
     }
 
     private void OnEnable()
@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        currentState.PhysicsUpdate();
         if (!isHurt && !isDead && !wait)
         {
             Move();
