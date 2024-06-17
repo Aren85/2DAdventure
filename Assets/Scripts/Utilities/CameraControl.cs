@@ -6,6 +6,8 @@ using System;
 
 public class CameraControl : MonoBehaviour
 {
+    [Header("事件監聽")]
+    public VoidEventSO afterSceneLoadedEvent;
     private CinemachineConfiner2D confiner2D;
     public CinemachineImpulseSource impulseSource;
     public VoidEventSO cameraShakeEvent;
@@ -16,10 +18,17 @@ public class CameraControl : MonoBehaviour
     private void OnEnable()
     {
         cameraShakeEvent.OnEventRaised += onCameraShakeEvent;
+        afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoadedEvent;
     }
     private void OnDisable()
     {
         cameraShakeEvent.OnEventRaised -= onCameraShakeEvent;
+        afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
+    }
+
+    private void OnAfterSceneLoadedEvent()
+    {
+        GetNewCameraBounds();
     }
 
     private void onCameraShakeEvent()
@@ -27,11 +36,11 @@ public class CameraControl : MonoBehaviour
         impulseSource.GenerateImpulse();
     }
 
-    //TODO:場景切換後更改
-    private void Start()
-    {
-        GetNewCameraBounds();
-    }
+
+    // private void Start()
+    // {
+    //     GetNewCameraBounds();
+    // }
 
     private void GetNewCameraBounds()
     {
