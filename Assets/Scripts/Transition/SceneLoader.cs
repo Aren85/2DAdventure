@@ -18,6 +18,7 @@ public class SceneLoader : MonoBehaviour
 
     [Header("廣播")]
     public VoidEventSO afterSceneLoadedEvent;
+    public FadeEventSO fadeEvent;
     [SerializeField] private GameSceneSO currentLoadScene;
     private GameSceneSO sceneToLoad;
     private Vector3 positionToGo;
@@ -79,7 +80,8 @@ public class SceneLoader : MonoBehaviour
     {
         if (fadeScreen)
         {
-            //TODO:實現漸入漸出
+            //TODO:實現漸入漸出(變黑)
+            fadeEvent.FadeIn(fadeDuration);
         }
         yield return new WaitForSeconds(fadeDuration);
         yield return currentLoadScene.sceneReference.UnLoadScene();
@@ -110,6 +112,7 @@ public class SceneLoader : MonoBehaviour
         if (fadeScreen)
         {
             //TODO:
+            fadeEvent.FadeOut(fadeDuration);
         }
 
         isLoading = false;
