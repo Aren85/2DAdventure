@@ -11,15 +11,21 @@ public class SceneLoader : MonoBehaviour
 {
     public Transform playerTrans;
     public Vector3 firstPosition;
+    public Vector3 menuPosition;
 
     [Header("事件監聽")]
     public SceneLoadEventSO loadEventSO;
-    public GameSceneSO firstLoadScene;
+    public VoidEventSO newGameEvent;
 
     [Header("廣播")]
     public VoidEventSO afterSceneLoadedEvent;
     public FadeEventSO fadeEvent;
-    [SerializeField] private GameSceneSO currentLoadScene;
+    public SceneLoadEventSO unloadedSceneEvent;
+
+    [Header("場景")]
+    public GameSceneSO firstLoadScene;
+    public GameSceneSO menuScene;
+    private GameSceneSO currentLoadScene;
     private GameSceneSO sceneToLoad;
     private Vector3 positionToGo;
     private bool fadeScreen;
@@ -31,19 +37,24 @@ public class SceneLoader : MonoBehaviour
         //Addressables.LoadSceneAsync(LV1LoadScene.sceneReference, LoadSceneMode.Additive);
         //currentLoadScene = firstLoadScene;
         //currentLoadScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive);
+
+
     }
     //TODO:做完MainMenu之後更改
     private void Start()
     {
-        NewGame();
+        loadEventSO.RaiseLoadRequestEvent(menuScene, menuPosition, true);
+        //NewGame();
     }
     private void OnEnable()
     {
         loadEventSO.LoadRequestEvent += OnLoadRequestEvent;
+        newGameEvent.OnEventRaised += NewGame;
     }
     private void OnDisable()
     {
         loadEventSO.LoadRequestEvent -= OnLoadRequestEvent;
+        newGameEvent.OnEventRaised -= NewGame;
     }
 
     private void NewGame()
@@ -85,6 +96,10 @@ public class SceneLoader : MonoBehaviour
             fadeEvent.FadeIn(fadeDuration);
         }
         yield return new WaitForSeconds(fadeDuration);
+
+        //廣播事件調整血量調顯示
+        unloadedSceneEvent.RaiseLoadRequestEvent(sceneToLoad, positionToGo, true);
+
         yield return currentLoadScene.sceneReference.UnLoadScene();
         //關閉人物
         playerTrans.gameObject.SetActive(false);
