@@ -21,6 +21,10 @@ public class Character : MonoBehaviour
     public UnityEvent<Transform> OnTakeDamage;
     public UnityEvent OnDie;
 
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
     private void NewGame()
     {
         currentHealth = maxHealth;

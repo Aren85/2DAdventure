@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gdb-keyboard-2_19
+      name: X
       rect:
         serializedVersion: 2
         x: 464
@@ -543,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gdb-keyboard-2_20
+      name: VV
       rect:
         serializedVersion: 2
         x: 480
@@ -13451,6 +13451,8 @@ TextureImporter:
       E2: 836084803
       E3: 1212618739
       E4: 1496796359
+      VV: 1105958664
+      X: -1086657126
       gdb-keyboard-2_0: -1248511867
       gdb-keyboard-2_1: 1904463115
       gdb-keyboard-2_10: -75494825
@@ -13551,7 +13553,6 @@ TextureImporter:
       gdb-keyboard-2_187: -753149907
       gdb-keyboard-2_188: -1944816681
       gdb-keyboard-2_189: 274144882
-      gdb-keyboard-2_19: -1086657126
       gdb-keyboard-2_190: -872406024
       gdb-keyboard-2_191: -430896704
       gdb-keyboard-2_192: -810111943
@@ -13563,7 +13564,6 @@ TextureImporter:
       gdb-keyboard-2_198: 1747719198
       gdb-keyboard-2_199: -2043015098
       gdb-keyboard-2_2: 1021252194
-      gdb-keyboard-2_20: 1105958664
       gdb-keyboard-2_200: 753622247
       gdb-keyboard-2_201: -1008567286
       gdb-keyboard-2_202: -1047516857
