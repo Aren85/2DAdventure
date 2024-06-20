@@ -3185,6 +3185,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: ID
+      value: a055eaeb-5baf-4867-9642-b729bc29b418
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: persistentType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4427183219203915480, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
       propertyPath: m_Name
       value: Boar (3)
@@ -18422,6 +18430,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: ID
+      value: 2cc4e725-86ef-4af0-9910-b7af955932a9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: persistentType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4427183219203915480, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
       propertyPath: m_Name
       value: Boar (2)
@@ -18597,6 +18613,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2036237880778642356, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: ID
+      value: bfee8f5b-399d-4548-a68e-8fde3f78369d
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: persistentType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4427183219203915480, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
@@ -20047,6 +20071,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2036237880778642356, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: ID
+      value: aef8f115-328e-4dbb-8a75-31ed444b7ede
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499556012900851815, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
+      propertyPath: persistentType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4427183219203915480, guid: 00455fd4fa2267947afb68452ef579bd, type: 3}
