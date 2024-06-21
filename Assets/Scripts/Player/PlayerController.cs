@@ -7,8 +7,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("監聽事件")]
-    public SceneLoadEventSO loadEvent;
+    public SceneLoadEventSO sceneLoadEvent;
     public VoidEventSO afterSceneLoadedEvent;
+    public VoidEventSO loadDataEvent;
+    public VoidEventSO backToMenuEvent;
 
     public PlayerInputControl inputControl;
     private Rigidbody2D rb;
@@ -44,23 +46,30 @@ public class PlayerController : MonoBehaviour
 
         //攻擊
         inputControl.Gameplay.Attack.started += PlayerAttack;
+        inputControl.Enable();
     }
 
 
 
     private void OnEnable()
     {
-        inputControl.Enable();
-        loadEvent.LoadRequestEvent += OnLoadEvent;
+
+        sceneLoadEvent.LoadRequestEvent += OnLoadEvent;
         afterSceneLoadedEvent.OnEventRaised += OnAfterSceneLoadedEvent;
+        loadDataEvent.OnEventRaised += OnLoadDataEvent;
+        backToMenuEvent.OnEventRaised += OnLoadDataEvent;
     }
 
     private void OnDisable()
     {
         inputControl.Disable();
-        loadEvent.LoadRequestEvent -= OnLoadEvent;
+        sceneLoadEvent.LoadRequestEvent -= OnLoadEvent;
         afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
+        loadDataEvent.OnEventRaised -= OnLoadDataEvent;
+        backToMenuEvent.OnEventRaised -= OnLoadDataEvent;
     }
+
+
 
     public void Update()
     {
@@ -87,6 +96,13 @@ public class PlayerController : MonoBehaviour
     {
         inputControl.Gameplay.Disable();
     }
+    //讀取遊戲進度
+    private void OnLoadDataEvent()
+    {
+        isDead = false;
+    }
+
+
     //場景結束之後啟動控制
     private void OnAfterSceneLoadedEvent()
     {

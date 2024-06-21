@@ -59,10 +59,13 @@ public class Character : MonoBehaviour, ISaveable
     {
         if (other.CompareTag("Water"))
         {
-            //死亡，更新血量
-            currentHealth = 0;
-            OnHealthChange?.Invoke(this);
-            OnDie?.Invoke();
+            if (currentHealth > 0)
+            {
+                //死亡，更新血量
+                currentHealth = 0;
+                OnHealthChange?.Invoke(this);
+                OnDie?.Invoke();
+            }
         }
     }
     public void TakeDamage(Attack attacker)

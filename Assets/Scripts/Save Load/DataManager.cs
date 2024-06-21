@@ -9,6 +9,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
     [Header("事件監聽")]
     public VoidEventSO saveDataEvent;
+    public VoidEventSO loadDataEvent;
     private List<ISaveable> saveableList = new List<ISaveable>();
 
     private Data saveData;
@@ -30,10 +31,12 @@ public class DataManager : MonoBehaviour
     private void OnEnable()
     {
         saveDataEvent.OnEventRaised += Save;
+        loadDataEvent.OnEventRaised += Load;
     }
     private void OnDisable()
     {
         saveDataEvent.OnEventRaised -= Save;
+        loadDataEvent.OnEventRaised -= Load;
     }
     private void Update()
     {
