@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-01_2
+      name: Stick
       rect:
         serializedVersion: 2
         x: 374
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-01_10
+      name: Green
       rect:
         serializedVersion: 2
         x: 140
@@ -690,7 +690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-01_27
+      name: Blue
       rect:
         serializedVersion: 2
         x: 140
@@ -1089,7 +1089,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-01_46
+      name: Yellow
       rect:
         serializedVersion: 2
         x: 140
@@ -1761,7 +1761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-01_78
+      name: Red
       rect:
         serializedVersion: 2
         x: 140
@@ -1857,7 +1857,6 @@ TextureImporter:
     nameFileIdTable:
       Base-01_: -943552608
       Base-01_0: 2093047905
-      Base-01_10: -1455718671
       Base-01_11: 876289758
       Base-01_12: -1246313497
       Base-01_13: 1493704432
@@ -1866,14 +1865,12 @@ TextureImporter:
       Base-01_17: 1881991405
       Base-01_18: -1841847211
       Base-01_19: -1533553408
-      Base-01_2: -734673539
       Base-01_21: -1495686521
       Base-01_22: -810571798
       Base-01_23: 1531240665
       Base-01_24: 1892057260
       Base-01_25: -1496798289
       Base-01_26: 191240462
-      Base-01_27: 1067765642
       Base-01_28: 614298306
       Base-01_3: 1583694835
       Base-01_30: 476031776
@@ -1893,7 +1890,6 @@ TextureImporter:
       Base-01_43: 1707225937
       Base-01_44: 1745165676
       Base-01_45: -939889589
-      Base-01_46: 477650621
       Base-01_47: -1717289809
       Base-01_48: 590556971
       Base-01_49: 1063582264
@@ -1926,7 +1922,6 @@ TextureImporter:
       Base-01_75: -1368795801
       Base-01_76: -380912510
       Base-01_77: 893801674
-      Base-01_78: 1866436215
       Base-01_79: -330079313
       Base-01_8: 356261080
       Base-01_80: -1924786394
@@ -1937,6 +1932,11 @@ TextureImporter:
       Base-UI_healthRed: -1401755502
       Base-UI_powerFrame: -1773394101
       Base-UI_powerYellow: 1071391314
+      Blue: 1067765642
+      Green: -1455718671
+      Red: 1866436215
+      Stick: -734673539
+      Yellow: 477650621
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

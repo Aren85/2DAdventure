@@ -232,6 +232,17 @@ public partial class @PlayerInputControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2d47c08e-bb33-4d37-92ec-ca672d0e8b33"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5b52f5ca-5f2e-40f7-8d38-e2978aa2b110"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
