@@ -119,6 +119,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1383,7 +1396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-01_60
+      name: Settings
       rect:
         serializedVersion: 2
         x: 50
@@ -1905,7 +1918,6 @@ TextureImporter:
       Base-01_58: -225948901
       Base-01_59: 1036420254
       Base-01_6: 1413288843
-      Base-01_60: 2004667153
       Base-01_61: -660102172
       Base-01_62: 855668310
       Base-01_63: -794387469
@@ -1935,6 +1947,7 @@ TextureImporter:
       Blue: 1067765642
       Green: -1455718671
       Red: 1866436215
+      Settings: 2004667153
       Stick: -734673539
       Yellow: 477650621
   mipmapLimitGroupName: 

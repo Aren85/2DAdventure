@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,17 +14,26 @@ public class UIManager : MonoBehaviour
     public VoidEventSO loadDataEvent;
     public VoidEventSO gameOverEvent;
     public VoidEventSO backToMenuEvent;
+    public FloatEventSO syncVolumeEvent;
+
+    [Header("廣播")]
+    public VoidEventSO pauseEvent;
 
     [Header("組件")]
     public GameObject gameOverPanel;
     public GameObject restartBtn;
     public GameObject mobileTouch;
+    public Button settingsBtn;
+    public GameObject pausePanel;
+    public Slider volumeSlider;
 
     private void Awake()
     {
 #if UNITY_STANDALONE
         mobileTouch.SetActive(false);
 #endif
+
+        settingsBtn.onClick.AddListener(TogglePausePanel);
     }
 
     private void OnEnable()
@@ -33,6 +43,7 @@ public class UIManager : MonoBehaviour
         loadDataEvent.OnEventRaised += OnLoadDataEvent;
         gameOverEvent.OnEventRaised += OnGameOverEvent;
         backToMenuEvent.OnEventRaised += OnLoadDataEvent;
+        syncVolumeEvent.OnEventRaised += OnSyncVolumeEvent;
     }
 
     private void OnDisable()
@@ -42,6 +53,27 @@ public class UIManager : MonoBehaviour
         loadDataEvent.OnEventRaised -= OnLoadDataEvent;
         gameOverEvent.OnEventRaised -= OnGameOverEvent;
         backToMenuEvent.OnEventRaised -= OnLoadDataEvent;
+        syncVolumeEvent.OnEventRaised -= OnSyncVolumeEvent;
+    }
+
+    private void OnSyncVolumeEvent(float amount)
+    {
+        volumeSlider.value = (amount + 80) / 100;
+    }
+
+    private void TogglePausePanel()
+    {
+        if (pausePanel.activeInHierarchy)
+        {
+            pausePanel.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            pauseEvent.RaiseEvent();
+            pausePanel.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     private void OnGameOverEvent()
